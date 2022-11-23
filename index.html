@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS && TrackJS.install({ 
+      token: "9096c513bce043b1b032dea8ce89d5fc"
+      // for more configuration options, see https://docs.trackjs.com
+    });
+  </script>
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,9 +107,32 @@
     });
 
     let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
-
+    // console.log(errorBtns[0]);
     // Start your code here
     // You may move this JS to another file if you wish
+    errorBtns[0].addEventListener('click', e => {
+      console.log("Console Log Demo");
+    })
+    errorBtns[1].addEventListener('click', e => {
+      console.error("Console Error Demo");
+    })
+    errorBtns[2].addEventListener('click', e => {
+      console.count("Count Button:");
+    })
+    errorBtns[3].addEventListener('click', e => {
+      console.warn("Console Warn Button");
+    })
+    errorBtns[4].addEventListener('click', e => {
+      const errorMsg = 'The number does not equal 3';
+      let number = 2;
+      console.assert(2 === 3, '%o', { number, errorMsg  });
+    })
+    errorBtns[5].addEventListener('click', e => {
+      console.clear();
+    })
+    errorBtns[6].addEventListener('click', e => {
+      console.dir(errorBtns[5]);
+    })
   </script>
 </body>
 
