@@ -145,7 +145,6 @@
     errorBtns[6].addEventListener('click', e => {
       console.dir(errorBtns[5]);
     })
-<<<<<<< HEAD
     errorBtns[7].addEventListener('click', e => {
       console.dirxml(document.getElementById('error-btns'))
     })
@@ -161,11 +160,11 @@
         this.num = num;
       }  
 
-      const first = new Person("SWE", "110");
-      const second = new Person("language", "130");
-      const thrid = new Person("adv swe", "112");
+      const first = new NN("SWE", "110");
+      const second = new NN("language", "130");
+      const thrid = new NN("adv swe", "112");
 
-      console.table([tyrone, janet, maria]);
+      console.table([first, second, thrid]);
     })
     errorBtns[11].addEventListener('click', e =>{
       console.time();
@@ -186,9 +185,6 @@
       console.log("Sadly an error happened my friend")
       console.dir(boom);
     })
-=======
-
->>>>>>> af7c83ad10d84602f7b99f49b227fdc9193186e1
     //Step 3
     class ButtonNotFindError extends Error{
       constructor(message){
