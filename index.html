@@ -133,6 +133,14 @@
     errorBtns[6].addEventListener('click', e => {
       console.dir(errorBtns[5]);
     })
+    
+    errorBtns[14].addEventListener('click', e => {
+      window.addEventListener("error", (event) => {
+  
+        console.log("error my friend");
+        
+      });
+    })
 
     //Step 3
     class ButtonNotFindError extends Error{
