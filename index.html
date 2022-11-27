@@ -133,6 +133,30 @@
     errorBtns[6].addEventListener('click', e => {
       console.dir(errorBtns[5]);
     })
+
+    //Step 3
+    class ButtonNotFindError extends Error{
+      constructor(message){
+        super(message);
+        this.name = 'ButtonNotFindError'
+      }
+    }
+    function checkButton(index){
+      let button = errorBtns[index];
+      if(index > errorBtns.length) throw new ButtonNotFindError('index out of range')
+      return button;
+    }
+    try{
+      alert('Start of try runs');
+      let button = checkButton(20)
+      alert('End of try runs'); 
+    }
+    catch(err) {
+        console.error(err)
+    }
+    finally {
+        console.log('checked')
+    }
   </script>
 </body>
 
