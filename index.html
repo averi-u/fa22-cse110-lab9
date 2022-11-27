@@ -98,11 +98,12 @@
   <script>
     //deepest
     function handleBtnClick() {
-      const eventR = console.log("boom");
+      deep();
+      const event = console.log(boom);
       // let event = console.dir(boom);
     }
     function deepest(){
-      console.trace(handleBtnClick());
+      console.trace();
     }
     function deeper(){
       deepest();
@@ -180,7 +181,7 @@
       // for(let i = 0; i< errorBtns.length;i++){
       //   let tracedButton = errorBtns[i];
       // }
-      deep();
+      handleBtnClick();
       
     })
     //
@@ -190,14 +191,14 @@
     //   console.dir(boom);
     // })
 
-    errorBtns[14].addEventListener('click', e => {
-      console.log("Sadly an error happened my friend")
+    errorBtns[14].addEventListener('click', handleBtnClick()
+      // console.log("Sadly an error happened my friend")
       
+      // window.addEventListener("error", (event) => {
+      //   console.log(event);
+      // });
 
-      window.addEventListener("error", (event) => {
-        console.error(event);
-      });
-    })
+    )
     //Step 3
     class ButtonNotFindError extends Error{
       constructor(message){
