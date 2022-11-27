@@ -96,6 +96,18 @@
   </main>
 
   <script>
+    //deepest
+    function deepest(){
+      console.trace();
+    }
+    function deeper(){
+      deepest();
+    }
+    function deep(){
+      deeper();
+
+    }
+
     let form = document.querySelector('form');
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -133,7 +145,37 @@
     errorBtns[6].addEventListener('click', e => {
       console.dir(errorBtns[5]);
     })
-
+    errorBtns[7].addEventListener('click', e => {
+      console.dirxml(document.getElementById('error-btns'))
+    })
+    errorBtns[8].addEventListener('click', e =>{
+      console.group('console group start')
+    })
+    errorBtns[9].addEventListener('click', e =>{
+      console.groupEnd();
+    })
+    errorBtns[10].addEventListener('click', e =>{
+      console.table(table['console', 'table','demo']);
+    })
+    errorBtns[11].addEventListener('click', e =>{
+      console.time();
+    })
+    errorBtns[12].addEventListener('click', e =>{
+      console.timeEnd();
+    })
+    errorBtns[13].addEventListener('click', e =>{
+      // for(let i = 0; i< errorBtns.length;i++){
+      //   let tracedButton = errorBtns[i];
+      // }
+      deep();
+      
+    })
+    //
+    errorBtns[14].addEventListener('click', e =>{
+      HTMLButtonElement.
+      console.log("Sadly an error happened my friend")
+      console.dir(boom);
+    })
     //Step 3
     class ButtonNotFindError extends Error{
       constructor(message){
