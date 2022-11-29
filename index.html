@@ -97,8 +97,9 @@
 
   <script>
     //deepest
-    function handleBtnClick(input){
-      return input+1;
+    function handleBtnClick_14(){
+      console.log("Sadly an error happened my friend");
+      console.log(boom);
     }
     function handleBtnClick(){
       deep()
@@ -179,7 +180,20 @@
     })
     errorBtns[13].addEventListener('click', handleBtnClick)
     //
-    errorBtns[14].addEventListener('click', handleBtnClick(boom))
+    // errorBtns[14].addEventListener('click', e =>{
+    //   HTMLButtonElement.
+    //   console.log("Sadly an error happened my friend")
+    //   console.dir(boom);
+    // })
+
+    errorBtns[14].addEventListener('click', handleBtnClick_14)
+      // console.log("Sadly an error happened my friend")
+      
+      // window.addEventListener("error", (event) => {
+      //   console.log(event);
+      // });
+
+
     //Step 3
     class ButtonNotFindError extends Error{
       constructor(message){
