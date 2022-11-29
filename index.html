@@ -98,11 +98,19 @@
   <script>
     //deepest
     function handleBtnClick_14(){
+    //global
+    
+    function handleBtnClick(){
       console.log("Sadly an error happened my friend");
       console.log(boom);
     }
     function handleBtnClick(){
       deep()
+    //trace
+    function handleBtnClick_14(){
+      if(true){
+        deep()
+      } 
     }
     function deepest(){
       console.trace();
@@ -114,6 +122,7 @@
       deeper();
     }
 
+// given codes
     let form = document.querySelector('form');
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -180,6 +189,8 @@
     })
     errorBtns[13].addEventListener('click', handleBtnClick)
     //
+    errorBtns[13].addEventListener('click', handleBtnClick_14)
+    // 
     // errorBtns[14].addEventListener('click', e =>{
     //   HTMLButtonElement.
     //   console.log("Sadly an error happened my friend")
@@ -187,6 +198,7 @@
     // })
 
     errorBtns[14].addEventListener('click', handleBtnClick_14)
+    errorBtns[14].addEventListener('click', handleBtnClick)
       // console.log("Sadly an error happened my friend")
       
       // window.addEventListener("error", (event) => {
